@@ -28,7 +28,7 @@ console.log(newStringOne.trim());
 
 const url = "https://bhaskar.com/bhaskar%21jha"
 
-console.log(url.replace('%20', '-'))
+console.log(url.replace('%21', '-'))
 
 console.log(url.includes('sundar')) 
 //sundar hai ya nahi above url ki string mein ye bta rha hai

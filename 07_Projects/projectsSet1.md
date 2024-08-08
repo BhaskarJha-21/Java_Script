@@ -38,6 +38,7 @@ buttons.forEach(function(button){
 ```
 
 ## project 2 solution
+
 ```javascript
 const form = document.querySelector('form');
 // this usecase will give you empty
@@ -57,4 +58,22 @@ form.addEventListener('submit', function (e) {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
+```
+
+## project 3 solution
+
+```javascript
+const clock = document.getElementById('clock');
+// const clock = document.querySelector('#clock')
+
+// let date = new Date()
+// console.log(date.toLocaleDateString());
+
+
+setInterval(function(){
+    let date = new Date();
+    // console.log(date.toLocaleTimeString());
+    clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
 ```

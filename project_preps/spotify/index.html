@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">
+        <img src="images/spotify-logo.png" alt="Spotify Logo">
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Search</a></li>
+          <li><a href="#">Your Library</a></li>
+        </ul>
+      </nav>
+      <div class="playlists">
+        <h3>Playlists</h3>
+        <ul>
+          <li><a href="#">Discover Weekly</a></li>
+          <li><a href="#">Top Hits</a></li>
+          <li><a href="#">Chill Vibes</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="header">
+        <div class="search-bar">
+          <input type="text" placeholder="Search for songs, artists, albums...">
+        </div>
+        <div class="user-profile">
+          <span>User</span>
+        </div>
+      </div>
+
+      <div class="content">
+        <h2>Good Evening</h2>
+        <div class="cards">
+          <div class="card" onclick="playSong('song1.mp3', 'album1.jpg')">
+            <img src="images/album1.jpg" alt="Album 1">
+            <span>Playlist 1</span>
+          </div>
+          <div class="card" onclick="playSong('song2.mp3', 'album2.jpg')">
+            <img src="images/album2.jpg" alt="Album 2">
+            <span>Playlist 2</span>
+          </div>
+          <div class="card" onclick="playSong('song3.mp3', 'album3.jpg')">
+            <img src="images/album3.jpg" alt="Album 3">
+            <span>Playlist 3</span>
+          </div>
+        </div>
+
+        <h2>Made for You</h2>
+        <div class="cards">
+          <div class="card" onclick="playSong('song4.mp3', 'album4.jpg')">
+            <img src="images/album4.jpg" alt="Album 4">
+            <span>Recommended 1</span>
+          </div>
+          <div class="card" onclick="playSong('song5.mp3', 'album5.jpg')">
+            <img src="images/album5.jpg" alt="Album 5">
+            <span>Recommended 2</span>
+          </div>
+          <div class="card" onclick="playSong('song6.mp3', 'album6.jpg')">
+            <img src="images/album6.jpg" alt="Album 6">
+            <span>Recommended 3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player">
+      <div class="track-info">
+        <img id="album-cover" src="images/placeholder.jpg" alt="Album Cover">
+        <div>
+          <span id="track-name">Track Name</span><br>
+          <span id="artist-name">Artist Name</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button onclick="prevSong()">Prev</button>
+        <button id="playButton" onclick="togglePlay()">Play</button>
+        <button onclick="nextSong()">Next</button>
+      </div>
+      <div class="volume">
+        <input type="range" min="0" max="100" id="volume-control">
+      </div>
+      <audio id="audio-player" src=""></audio>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

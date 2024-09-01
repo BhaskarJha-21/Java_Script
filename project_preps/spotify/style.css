@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+      "sidebar main-content"
+      "sidebar music-player";
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #1c1c1c;
+    padding: 20px;
+  }
+  
+  .sidebar .logo img {
+    width: 150px;
+  }
+  
+  .sidebar .nav ul,
+  .sidebar .playlists ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar .nav ul li,
+  .sidebar .playlists ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar .nav ul li a,
+  .sidebar .playlists ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .main-content {
+    grid-area: main-content;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .header .search-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+  }
+  
+  .header .user-profile span {
+    font-weight: bold;
+  }
+  
+  .content h2 {
+    margin-bottom: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    background-color: #282828;
+    width: 30%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .card:hover {
+    background-color: #333333;
+  }
+  
+  .music-player {
+    grid-area: music-player;
+    background-color: #181818;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .music-player .track-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .music-player .track-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .music-player .controls button {
+    background-color: #1db954;
+    border: none;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .music-player .volume input {
+    width: 100px;
+  }
+  

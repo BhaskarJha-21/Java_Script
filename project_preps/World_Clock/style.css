@@ -1,0 +1,9 @@
+.clock-container {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#clock {
+	font-size: 48px;
+	font-family: Arial, sans-serif;
+}
